@@ -12,7 +12,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -34,7 +34,7 @@ public class MyApiController {
         this.restTemplate = restTemplate;
     }
 
-    @PostMapping("/authenticate")
+    @GetMapping("/authenticate")
     @ResponseStatus(HttpStatus.OK)
     public void authenticate() throws JsonProcessingException {
         log.info("MyApiController::authenticate");

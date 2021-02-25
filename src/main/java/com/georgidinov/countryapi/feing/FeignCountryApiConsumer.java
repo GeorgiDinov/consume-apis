@@ -29,4 +29,15 @@ public class FeignCountryApiConsumer implements ApiService {
     public Object getCountryByName(@PathVariable String countryName) {
         return proxy.getCountryByName(countryName);
     }
+
+
+    @GetMapping("/feign/countries/filtered")
+    public FilteredCountriesListDTO getCountryList() {
+        return new FilteredCountriesListDTO(this.getCountriesFiltered());
+    }
+
+    @Override
+    public List<FilteredCountryDTO> getCountriesFiltered() {
+        return proxy.getCountriesFiltered();
+    }
 }

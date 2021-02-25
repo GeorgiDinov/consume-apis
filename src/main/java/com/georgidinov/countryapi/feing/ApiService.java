@@ -10,6 +10,9 @@ public interface ApiService {
     @GetMapping("/rest/v2/all")
     List<Object> getCountries();
 
+    @GetMapping("/rest/v2/all?fields=name;capital;flag;")
+    List<FilteredCountryDTO> getCountriesFiltered();
+
     @GetMapping("/rest/v2/name/{countryName}")
     Object getCountryByName(@PathVariable String countryName);
 
