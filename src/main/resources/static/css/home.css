@@ -41,6 +41,7 @@ button {
     background-color: rgba(175, 238, 235, 0.972);
     color: rgba(7, 172, 248, 0.986);
 }
+
 button:hover {
     box-shadow: 0 0.5em 0.5em -0.4em rgba(4, 145, 240, 0.972);
     transform: translateY(-0.10em);
@@ -52,19 +53,24 @@ button:hover {
     flex: 0.7 0.7;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     overflow: auto;
-    border-radius: 30px;
 }
 
-.contact-holder {
+.list-element {
     width: 100%;
     font-weight: 400;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1%;
+    align-items: flex-start;
+    margin-top: 2%;
+    border-bottom: 1px solid aqua;
+}
+
+img {
+    flex: 1 1;
+    height: 2rem;
 }
